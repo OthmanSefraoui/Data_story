@@ -19,7 +19,18 @@ def load_def_flags(filepath, dfs):
 
 
 def load_em_intensity(filepath, dfs):
-    return None
+    df = (
+        pd.read_csv(filepath, encoding="latin1")
+        .drop("Year Code", axis='columns')
+    )
+    #reload flags without NA to avoid conflict between "NA" and "" flag
+    df["Flag"] = pd.read_csv(filepath, encoding="latin1", usecols=["Flag"], keep_default_na=False)
+    df = df.merge(dfs.def_flags, on="Flag").drop(columns="Flag").rename(columns={"Flags": "Flag"})
+
+    split_dfs = DotMap(_dynamic=False)
+    for element in df["Element"].unique():
+        split_dfs[element]
+
 
 
 _DFS = {
@@ -31,7 +42,7 @@ _DFS = {
 
 }
 
-def load_df(*df_names, data_dir="."):
+def load_dfs(*df_names, data_dir="./data"):
     data_dir = Path(data_dir)
 
     # find missing df_name
