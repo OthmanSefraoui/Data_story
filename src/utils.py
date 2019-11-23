@@ -27,7 +27,7 @@ def remove_country_group(df, df_area_code=None):
         It appears all country-group use "Area Code" >= 5000.
         However, this is not guaranteed so we prefere to use the standars to get country group code
     """
-    if df_area_code:
+    if df_area_code is not None:
         return df[~df["Area Code"].isin(df_area_code["Country Group Code"])]
     else:
         return df[ df["Area Code"] < 5000]
@@ -53,7 +53,7 @@ def plot_completeness_histogram(df_or_dfs, ax=None, figsize=None):
                 name: df.groupby("Year")["Area Code"].nunique()
                 for name, df in df_or_dfs.items()
             }
-        ).plot.bar(colormap="Paired", ax=ax)
+        ).plot.bar(ax=ax)
         ax.legend()
     else:
         df_or_dfs.groupby("Year")["Area Code"].nunique().plot.bar(ax=ax)
