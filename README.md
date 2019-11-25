@@ -1,6 +1,10 @@
 Environmental impact of Agriculture
 ===================================
 
+## Milestione 2
+
+The main notebook for the milestone is `milestone_2.ipynb`. The purpose of the other notebook is explained in "Notes" below
+
 ## Abstract
 
 Enviromental concerns have drastically increased in the past years and agriculture's role in polluting the soils, air and water is a topic of choice. The *Global Food & Agriculture Statistics* provides global data on several aggricultural indicators, from production of certains goods to global trade data. Leveraging this dataset, we would like to find out if countries around the world have grasped the full extent of situation: are behaviors changing for the better ? On the other hand, we want to find countries that have a worse impact.
