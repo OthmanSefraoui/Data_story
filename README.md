@@ -1,50 +1,36 @@
-# Environmental impact of Agriculture
+Environmental impact of Agriculture
+===================================
 
 ## Abstract
 
-Enviromental concerns have drastically increased in the past years and agriculture's role in polluting the soils, air and water is a topic of choice. The *Global Food & Agriculture Statistics* provides global informations on agriculture  amplitude and impact. Leveraging those data, we would like to find out if countries around the world have grasped the full extent of situation: are behaviors changing for the better ?
+Enviromental concerns have drastically increased in the past years and agriculture's role in polluting the soils, air and water is a topic of choice. The *Global Food & Agriculture Statistics* provides global data on several aggricultural indicators, from production of certains goods to global trade data. Leveraging this dataset, we would like to find out if countries around the world have grasped the full extent of situation: are behaviors changing for the better ? On the other hand, we want to find countries that have a worse impact.
 
-On the other hand, we want to find countries that have a worse impact. In a globalised world, however, the producer and the consumer rarely are the same. Using data from FAO's *Detailed trade matrix*, we would also like to track the impact of consumption back, so that high-producing, low-consumming countries get a fair comparison.
+As the question is very broad in its previous form, we need to narrow the focus of our study as well as to define quantitative indicators of environmental 'impact'. The most obvious indicator are Greenhouse-gas emissions, mesured as an equivalence in CO2 emissions. As this indicator is available to us given our data, it constitutes our choice of 'enviromental impact' indicator.
+
+Meat has been a focus of recent debates on environmental impact and climate change and has raised numerous concerns about its resources use. We would therefore like to focus on the impact of meat production. This choice is also motivated by the data available, as there are some missing corners concerning crops in the database (see notes).
+
+While the dataset does provide a rough estimates of the CO2 equivalent emissions for meat production, we would like to refine this estimates through two ways. First by including the food eaten by the animals, which we expect to account for a non-negligible part of their footprint. Then, we would like to include trading data to take into account the globalised nature of nowadays' world. The producer and the consumer rarely are the same, so imputing the emissions to  the actual consumming country might be a fairer comparison between them, as well as yield insight in terms of consumption behavior accross the world.
 
 Data visualization would greatly benefit from dynamic maps, where impact per year, category and/or countries can be tuned and selected.
 
 ## Research questions
 
-+ What is the environmental impact of agriculture in each country in the past year ? 
-+ How did agricultural habits change over the year: are polluting practice in decline ?
-+ Are some countries more respectful than others and what can we learn from them ?
-+ Is it possible to find the consumer environmental impact, taking trades into account ?
++ What is the environmental impact of agriculture in each country in the past year, in terms of equivalent CO2 emissions 
++ How did agricultural habits change over the year: are heavily emitting practices in decline ?
++ Are some countries less emissive than others ? Can we find a reason for that in the data
++ When imputing the emissions to the actual consumer using trade data, what changes in terms of equivalent CO2 emissions per country ?
 
-## Dataset
+## Dataset and resources
 
 + [Global Food & Agriculture Statistics](https://www.kaggle.com/unitednations/global-food-agriculture-statistics)
 + [Detailed trade matrix](http://www.fao.org/faostat/en/#data/TM)
++ [Manure production and caracteristics](http://www.agronext.iastate.edu/immag/pubs/manure-prod-char-d384-2.pdf) for estimating food consumption of animals
 
-While the *Global Food & Agriculture Statistics* is a fairly large dataset (7 GB), it is splitted into several tables of managable size. We intend to use mainly the `Environment_X`, `Emissions_X`, `Production_X` and `Trade_X` datasets for our purposes. The *detailed trade matrix* will assist in taking detailed trade informations into account, so that the actual consumption of countries is estimated.
+## Notes
 
-## A list of internal milestones up until project milestone 2
+Concerning crops, there is a missing piece of info in the dataset. The crops production are given, and the emissions from fertilizer use are also given. However, we miss the amount of fertilizer used by crops type and fertilizer type, by year and by country. This prevents use from estimating emissions from crops due to fertilizer uses.
 
-+ 1st week & 2nd week
-    + Impact of Production (*Global Food & Agriculture Statistics* dataset)
-        + Select the most relevant tables and indicators
-        + Clean the data and assess the amount of missing data
-+ 2nd week & 3rd week
-    + Production
-        + compute indicators for countries
-+ 3rd week
-    + Production
-        + Verify data needs are met, go back to previous tasks if missing data / analysis
-    + Consumption (*Detailed trade matrix* dataset)
-        + Clean the trade data
-+ 4th week
-    + Consumption
-        + verify coherence between trade data of both datasets
-    + Both
-        + visualization
+The dataset does contains estimates for the emissions per kg of product for agricultural goods, but provide those estimated aggregated over all types of crops but rice. The coefficients used for the amount of fertilizer used per crop are not given, and the documentation reports using data that was not made available.
 
-
-## Questions for TAa
-+ Has the project a suitable workload ?
-+ What does the FLAG columns mean in the dataset ?
-+ Are milestones meant to ensure that the project progresses, or are they strict deadlines for the different parts ?
-e.g. Can we do additional data analysis between Milestone 2 and Report, or *must* all used data & computations be present in the Milestone 2 notebook ?
+We looked at [Fertilizer Use and Price](https://www.ers.usda.gov/data-products/fertilizer-use-and-price.aspx) from the United State Department of Agriculture, to try to estimate those coefficient. However, even within the different states of the USA, fertilizer use habits varies quite alot between states, as can be seen in the final plot of `notes.ipynd`.
+If variability is so high even in a single country, we do not believe that calculating fertilizer use by crops type by fertilizer type from USA's data and then apply those coefficients to the rest of the world will yield meaningful results. Differences in wealth, habits etc. induce too high a variation.
