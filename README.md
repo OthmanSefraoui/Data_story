@@ -17,13 +17,15 @@ Data visualization would greatly benefit from dynamic maps, where impact per yea
 
 + What is the environmental impact of agriculture in each country in the past year, in terms of equivalent CO2 emissions 
 + How did agricultural habits change over the year: are heavily emitting practices in decline ?
-+ Are some countries less emissive than others ? Can we find a reason for that in the data
++ Are some countries less emissive than others ?
 + When imputing the emissions to the actual consumer using trade data, what changes in terms of equivalent CO2 emissions per country ?
 
 ## Dataset and resources
 
 + [Global Food & Agriculture Statistics](https://www.kaggle.com/unitednations/global-food-agriculture-statistics)
 + [Detailed trade matrix](http://www.fao.org/faostat/en/#data/TM)
++ [Definitions and Standars](http://www.fao.org/faostat/en/#definitions) from the FAOSTAT website, used to interpret above datasets
++ The individuals Definition and Standard (green button, bottom right) for relevant tables of above datasets
 + [Manure production and caracteristics](http://www.agronext.iastate.edu/immag/pubs/manure-prod-char-d384-2.pdf) for estimating food consumption of animals
 
 ## Notes
@@ -32,5 +34,7 @@ Concerning crops, there is a missing piece of info in the dataset. The crops pro
 
 The dataset does contains estimates for the emissions per kg of product for agricultural goods, but provide those estimated aggregated over all types of crops but rice. The coefficients used for the amount of fertilizer used per crop are not given, and the documentation reports using data that was not made available.
 
+Those missing data are also the reason we estimate that animals have been fed a mix of cereal excluding rice, as this is the only aggregated emission data from crops we have access to.
+
 We looked at [Fertilizer Use and Price](https://www.ers.usda.gov/data-products/fertilizer-use-and-price.aspx) from the United State Department of Agriculture, to try to estimate those coefficient. However, even within the different states of the USA, fertilizer use habits varies quite alot between states, as can be seen in the final plot of `notes.ipynd`.
-If variability is so high even in a single country, we do not believe that calculating fertilizer use by crops type by fertilizer type from USA's data and then apply those coefficients to the rest of the world will yield meaningful results. Differences in wealth, habits etc. induce too high a variation.
+If variability is so high even in a single country, we do not believe that calculating fertilizer use by crops type by fertilizer type from USA's data and then apply those coefficients to the rest of the world will yield meaningful results. Differences in wealth, habits etc. induce too high variations.
