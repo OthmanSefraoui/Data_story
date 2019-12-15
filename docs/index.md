@@ -14,3 +14,19 @@ Can we add lists ?
 
 # LIQUID TEST
 {{ page.title }}
+
+
+# Map test
+
+{% capture includeTime %}
+{% include time.html %}
+{% endcapture %}
+{{ includeTime | replace: '  ', ''}}
+
+Second test
+
+<br/>
+
+<div>
+  <iframe src="img/TimeSliderChoropleth.html" height="700" width="1000" frameborder="0" scrolling="no"></iframe>
+</div>

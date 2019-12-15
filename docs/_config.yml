@@ -27,6 +27,9 @@ repository: QuentinSoubeyran/ADA-Project
 
 # Build settings
 markdown: kramdown
+kramdown:
+  parse_block_html: false
+  parse_span_html: false
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
