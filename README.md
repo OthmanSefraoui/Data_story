@@ -19,7 +19,7 @@ Data visualization would greatly benefit from dynamic maps, where impact per yea
 
 ## Research questions
 
-+ What is the environmental impact of agriculture in each country in the past year, in terms of equivalent CO2 emissions 
++ What are the equivalent CO2 emissions of agriculture in each country ?
 + How did agricultural habits change over the year: are heavily emitting practices in decline ?
 + Are some countries less emissive than others ?
 + When imputing the emissions to the actual consumer using trade data, what changes in terms of equivalent CO2 emissions per country ?
@@ -42,3 +42,11 @@ Those missing data are also the reason we estimate that animals have been fed a 
 
 We looked at [Fertilizer Use and Price](https://www.ers.usda.gov/data-products/fertilizer-use-and-price.aspx) from the United State Department of Agriculture, to try to estimate those coefficient. However, even within the different states of the USA, fertilizer use habits varies quite alot between states, as can be seen in the final plot of `notes.ipynd`.
 If variability is so high even in a single country, we do not believe that calculating fertilizer use by crops type by fertilizer type from USA's data and then apply those coefficients to the rest of the world will yield meaningful results. Differences in wealth, habits etc. induce too high variations.
+
+## Contributions
+Members of the team had the following contributions:
+
+- *Othmane*: manure data, 
+- *Othman*: manure data,
+- *Perrine*: trade data loading and analysis, trade imputation
+- *Quentin*: production data, data story
