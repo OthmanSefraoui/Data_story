@@ -45,6 +45,27 @@ We would like to focus on animal products. For simplicity, we will only look at 
 
 # World trend
 
+{% include display_world_prod.html %}
+
+# Production
+
+{% include display_map_prod.html %}
+
 # Emissions
 
-{% include globem_display.html %}
+{% include display_globem.html %}
+
+{% include display_map_emission.html %}
+
+# Consumption
+
+{% include display_trade_frac.html %}
+
+{% include display_map_conso.html %}
+
+
+# World emission trends
+
+{% include display_world_em.html %}
+
+{% include display_world_em_norm.html %}

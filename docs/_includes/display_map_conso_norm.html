@@ -1,0 +1,34 @@
+<div class="dropdown-wrapper">
+    <select class="dropdown-wrapper-child" id="sel_map_conso_norm_type">
+        <option value="linear_scale">Linear scale</option>
+        <option value="log_scale">Log scale</option>
+    </select>
+    <select class="dropdown-wrapper-child" id="sel_map_conso_norm_good">
+        <option value="cattle_dairy.html">Dairy cattle</option>
+        <option value="cattle_non-dairy.html">Meat cattle</option>
+        <option value="chickens_broilers.html">Meat Chicken</option>
+        <option value="chickens_layers.html">Laying Chicken</option>
+        <option value="swine.html">Swine</option>
+    </select>
+    <div>
+        <iframe
+          id="img_map_conso_norm"
+          src="img/map_conso_norm/linear_scale/cattle_dairy.html"
+          height="700"
+          width="{{page.width}}"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+</div>
+<script>
+    function loadMapConsoNormImg() {
+        var sel_folder = document.getElementById("sel_map_conso_norm_type");
+        var sel_file = document.getElementById("sel_map_conso_norm_good");
+        var img = document.getElementById("img_map_norm_conso");
+        img.src = "img/map_conso_norm/" + sel_folder.value + "/" + sel_file.value
+        return false;
+    }
+document.getElementById("sel_map_conso_norm_type").onchange = loadMapConsoNormImg;
+document.getElementById("sel_map_conso_norm_good").onchange = loadMapConsoNormImg;
+</script>
