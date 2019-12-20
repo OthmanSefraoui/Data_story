@@ -65,14 +65,13 @@ It is also interesting to note that there seems to be three groups of related go
 {: .text-justify}
 
 ## Detailed production
-Since the above study was global, we missed the differences between countries. We expect some very general groups to emerge, such as developped, developping and third-world countries.
+Since the above study was global, we missed the differences between countries. We expect some very general groups to emerge, such as developped, developping and third-world countries. However, we face the same problem above as with the raw world production: countries have different sizes, and to better compare them we have to take that into account. We need to look at the production per inhabitant to compare, say, the US and Switzerland. We therefore normalise by the number of inhabitants, and the unit becomes *tonnes per inhabitant*.
 {: .text-justify}
 
-{% include display_map_prod.html %}
+As even normalization by countries doesn't smooth the difference enough, two scales are available: linear scale and log scale.
+{: .text-justify}
 
-> Analysis: TODO
-
-However, we face the same problem above as with the raw world production: countries have different sizes, and to be able to better compare them we have to take that into account. We need to look at the production per inhabitant to be able to compare, say, the US and Switzerland:
+> Use the slide above the map to advance through time and watch the countries' normalized production change ! You can also zoom in and out, and move around in the map. Countries in white are countries for which there is missing data.
 {: .text-justify}
 
 {% include display_map_prod_norm.html %}
@@ -121,9 +120,6 @@ Chickens, however, are another story. While the emissions per animal have,'t cha
 As usual when using global data, we miss differences between countries. Let us look at a map of the emissions (in gigagrams), with time evolution.
 {: .text-justify}
 
-Use the slide above the map to advance through time and watch the countries' emissions change ! you can also zoom in and out, and move around in the map. Countries in white are countries for which there is missing data.
-{: .text-justify}
-
 As the map show different trends, you can chose the scale at which to look at: log scale or classic linear scale. Linear scale will highligh dominating producers, will log will show the difference in magnitudes.
 {: .text-justify}
 
@@ -141,6 +137,12 @@ While visualizing the emission due to animal breeding in their origin countries,
 {% include display_trade_frac.html %}
 
 We see that up to 15% of the world's production of goods are exchanged ! This is a lot, so we better take trades into account in our analysis. There is one big caveat, though: given our data, if a good transit throught a country (that is, country A buys it from country B which bought it from country C), it is counted twice, since we cannot distinguish between the origins of exports. It is likely we overestimate the fraction of trades - however, we do not expect the goods to transit through many countries, so the ratio is at most something like 5, being pessimistic.
+{: .text-justify}
+
+However, adjusting our emissions visualization for trades allows to distinguish between producers countries and consumers countries, which is interessting - it is worth a shot
+{: .text-justify}
+
+Now, how do we adjust for trade
 
 ## Trade adjusted
 
