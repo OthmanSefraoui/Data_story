@@ -45,4 +45,4 @@ The second difficulty is to find a metric to quantify the notion of "environment
 
 
 
-[]({% include globem_display.html %})
+  {% include globem_display.html %}
