@@ -41,7 +41,7 @@ The dataset does contains estimates for the emissions per kg of product for agri
 
 Those missing data are also the reason we estimate that animals have been fed a mix of cereal excluding rice, as this is the only aggregated emission data from crops we have access to.
 
-We looked at [Fertilizer Use and Price](https://www.ers.usda.gov/data-products/fertilizer-use-and-price.aspx) from the United State Department of Agriculture, to try to estimate those coefficient. However, even within the different states of the USA, fertilizer use habits varies quite alot between states, as can be seen in the final plot of `notes.ipynd`.
+We looked at [Fertilizer Use and Price](https://www.ers.usda.gov/data-products/fertilizer-use-and-price.aspx) from the United State Department of Agriculture, to try to estimate those coefficient. However, even within the different states of the USA, fertilizer use habits varies quite alot between states, as can be seen in the final plot of `notes.ipynb`.
 If variability is so high even in a single country, we do not believe that calculating fertilizer use by crops type by fertilizer type from USA's data and then apply those coefficients to the rest of the world will yield meaningful results. Differences in wealth, habits etc. induce too high variations.
 
 ## Contributions
