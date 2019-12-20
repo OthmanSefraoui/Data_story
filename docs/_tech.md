@@ -85,3 +85,6 @@ document.getElementById("TestDropdown").onchange = loadProjectImage;
     align="left">
     </iframe>
 </div>
+
+
+https://stackoverflow.com/questions/44887461/how-to-add-a-background-color-of-a-colormap-in-a-folium-map

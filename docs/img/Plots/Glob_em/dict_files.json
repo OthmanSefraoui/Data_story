@@ -1,0 +1,7 @@
+{
+    "milk cattle": "total_livestock_emission_cattle_dairy.png",
+    "beef cattle": "total_livestock_emission_cattle_non-dairy.png",
+    "meat chicken": "total_livestock_emission_chickens_broilers.png",
+    "hen laying eggs": "total_livestock_emission_chickens_layers.png",
+    "pig": "total_livestock_emission_swine.png"
+}

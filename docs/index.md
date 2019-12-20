@@ -39,6 +39,12 @@ Can data analysis provide us useful insights on that controversial topic ?
 The first challenge is to find the data. The [FAO](http://www.fao.org/faostat/en/#home) provides extensive agricultural data on production, trade etc. for most countries in the world, dating back to 1961, that we will use in our study. Since we only use that database, our conclusion are limited by the particular data we use.
 {: .text-justify}
 
-The second difficulty is to find a metric to quantify the notion of "environmental footprint", that is a very vague and ill-defined notion, unsutable for analysis. We will focus on *greenhouse gas emissions*, and for comparison purposes always express them in CO<sub>2</sub> equivalence. 
+The second difficulty is to find a metric to quantify the notion of "environmental footprint", that is a very vague and ill-defined notion, unsutable for analysis. We will focus on *greenhouse gas emissions*, and for comparison purposes always express them in CO<sub>2</sub> equivalence.
+
+We would like to focus on animal products. For simplicity, we will only look at *cattle*, *chickens* and *swine*: those are the three main group of animals. Goods produced by those animals, namely *milk* and *eggs*, will also retain our attention, so we need to do an important distinction: cattle and chicken can be breed for meat or for production. This gives five categories total.
+
+# World trend
+
+# Emissions
 
 {% include globem_display.html %}
