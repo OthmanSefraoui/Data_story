@@ -1,4 +1,33 @@
+---
+layout: default
+width: 1030
+width_half: 512
+height_half: 384
+---
 # TESTS BELOW - DO NOT KEEP
+
+# CONFIG FOR TECH
+<head>
+  <style>
+  .dropdown-wrapper > div {
+    border: 1px solid;
+  }
+  .dropdown-wrapper-child {
+    margin: auto;
+    display: flex;
+  }
+  .dropdown-wrapper-child div {
+    flex-grow: 1;
+    width: 0;
+  }
+  .dropdown-wrapper {
+    display: inline-block;
+  }
+  .box2 {
+    display:inline-block;
+  }
+  </style>
+</head>
 
 # Include an IFRAME
 <div>
@@ -29,3 +58,21 @@
     }
 document.getElementById("TestDropdown").onchange = loadProjectImage;
 </script>
+
+# SIDE BY SIDE ELEM
+
+<div class="box2">
+    <iframe src="img/TimeSliderChoropleth.html"
+    frameborder="0" scrolling="no"
+    width="{{page.width_half}}" height="{{page.height_half}}"
+    align="left">
+    </iframe>
+</div>
+<div class="box2">
+    <iframe src="img/TimeSliderChoropleth.html"
+    frameborder="0" scrolling="no"
+    width="{{page.width_half}}"
+    height="{{page.height_half}}" 
+    align="left">
+    </iframe>
+</div>

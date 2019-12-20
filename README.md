@@ -1,9 +1,10 @@
-Environmental impact of Agriculture
-===================================
+Equivalent CO2 Emissions from Animal Products
+=============================================
 
-## Milestione 2
+## Milestione 3
 
-The main notebook for the milestone is `milestone_2.ipynb`. The purpose of the other notebook is explained in "Notes" below
+The main notebook for the milestone is `milestone_3.ipynb`. The purpose of the other notebook is explained in "Notes" below
+The data story website is accessible [here](https://quentin-soubeyran.github.io/ADA-Project/). The sources for that data story are under the `/docs` folder. 
 
 ## Abstract
 
@@ -49,4 +50,4 @@ Members of the team had the following contributions:
 - *Othmane*: manure data, 
 - *Othman*: manure data,
 - *Perrine*: trade data loading and analysis, trade imputation
-- *Quentin*: production data, data story
+- *Quentin*: Loading and preparing production data, writting up the data story, handling website backend
