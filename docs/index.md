@@ -83,15 +83,19 @@ After this overview of the production trends to get accustomed to the kind of da
 {: .text-justify}
 
 # Looking at the environment
-
 The notion of "environmental footprint" is too vague and ill-defined to use it with data. We need something we can mesure, analyse and visualize. We will therefore use *greenhouse gas emissions*, and express them in CO<sub>2</sub> equivalent quantities: that is the amount of CO<sub>2</sub> needed to have the same greenhouse effect as the original emission. As we are not interested in the specific gas being studied, every number will just be expressed in equivalent CO<sub>2</sub>.
 {: .text-justify}
 
-One can be a bit disapointed that we use that metric for the study. It is however extremely difficult to find number that do represent "environmental footprint" in some sense, can be measure and for which we actually have data. As a matter of fact, the dataset from FAO we are used only reports things related to environmental impact as equivalent CO<sub>2</sub>, because it's the only accessible metrics that can compare widely differing causes. Since this is the dataset we use, there isn't much of a choice there.
+One can be a bit disapointed that we use such a metric for the study. It is however extremely difficult to find number that do represent "environmental footprint" in some sense, can be measure and for which we actually have data. As a matter of fact, the dataset from FAO we are used only reports things related to environmental impact as equivalent CO<sub>2</sub>, because it's the only accessible metrics that can compare widely differing causes. Since this is the dataset we use, there isn't much of a choice there.
 {: .text-justify}
 
+## Global emissions
+First, let us look at the global emisions for our five goods. As usual, we need to adjust for a growing population of bred animals, so we plot the "raw" data as well as the "per capita" data, normalized by . Mind the axis: so that you are able to compare the emissions between products, there is no baseline, and the vertical axis *doesn't start at 0*. We vizualize variations, but be careful about the starting point.
+{: .text-justify}
 
 {% include display_globem.html %}
+
+Lorem ipsum dolro
 
 {% include display_map_emission.html %}
 
