@@ -45,6 +45,9 @@ We looked at [Fertilizer Use and Price](https://www.ers.usda.gov/data-products/f
 If variability is so high even in a single country, we do not believe that calculating fertilizer use by crops type by fertilizer type from USA's data and then apply those coefficients to the rest of the world will yield meaningful results. Differences in wealth, habits etc. induce too high variations.
 
 ## Contributions
+
+(We all communicated well with each other and worked as a team)
+
 Members of the team had the following contributions:
 
 - *Othmane*: Loading and preparing manure data, computing co2 emissions due to manure, enteric fermentation and animal feeding of the consommation of countries, generating time sliders
