@@ -4,7 +4,7 @@ Equivalent CO2 Emissions from Animal Products
 ## Milestione 3
 
 The main notebook for the milestone is `milestone_3.ipynb`. The purpose of the other notebook is explained in "Notes" below
-The data story website is accessible [here](https://quentin-soubeyran.github.io/ADA-Project/). The sources for that data story are under the `/docs` folder. 
+The data story website is accessible [here](https://quentin-soubeyran.github.io/ADA-Project/). The sources for that data story are under the `docs/` folder. 
 
 ## Abstract
 
@@ -50,4 +50,4 @@ Members of the team had the following contributions:
 - *Othmane*: manure data, 
 - *Othman*: manure data,
 - *Perrine*: trade data loading, analysis and preprocessing, computing consumption of each country in terms of equivalent number of animal bred in the producing coutries, using trade data and production data, plot time series
-- *Quentin*: Loading and preparing production data, writting up the data story, handling website backend
+- *Quentin*: Loading and preparing production data, writting up the data story, handling website backend, map visualization
