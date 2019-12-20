@@ -89,19 +89,60 @@ The notion of "environmental footprint" is too vague and ill-defined to use it w
 One can be a bit disapointed that we use such a metric for the study. It is however extremely difficult to find number that do represent "environmental footprint" in some sense, can be measure and for which we actually have data. As a matter of fact, the dataset from FAO we are used only reports things related to environmental impact as equivalent CO<sub>2</sub>, because it's the only accessible metrics that can compare widely differing causes. Since this is the dataset we use, there isn't much of a choice there.
 {: .text-justify}
 
+We must precisely describe the emissions we take into account. We sum the emission from four sources:
++ emissions from manure that as been left as is in the field
++ emissions from manure that have been handled: reused as fertilizer or over
++ enteric fermentation, that cow ruminating and digesting (cattle only)
++ emissions from the production of food
+{: .text-justify}
+
+For the last point, we estimated the food needs of animals in eahc categories, considered they were eating a mixture of cereals and used the FAO data for the equivalent CO<sub>2</sub> emission per food mass. This is less than ideal, but we miss precise data there, so we estimated as we could.
+{: .text-justify}
+
+Overall, the only emissions we take into account are *direct*: emissions coming from electricity use, for instance, are ignored (becaus not in the dataset). The emissions we compute are therefore an *underestimate* of the total emissions.
+{: .text-justify}
+
 ## Global emissions
 First, let us look at the global emisions for our five goods. As usual, we need to adjust for a growing population of bred animals, so we plot the "raw" data as well as the "per capita" data, normalized by . Mind the axis: so that you are able to compare the emissions between products, there is no baseline, and the vertical axis *doesn't start at 0*. We vizualize variations, but be careful about the starting point.
 {: .text-justify}
 
 {% include display_globem.html %}
 
-Lorem ipsum dolro
+If you look at the raw emission for cattle, between 1986 and about 2000, there is a huge drop in emissions. This is expected, because it corresponds to the mad cow disease epidemic. Other emissions have seen a somewhat steady rise.
+{: .text-justify}
+
+Per capita emission are very revealing: we can see that dairy cattle, meat cattle and swine emission per animal decreases over time! (dairy cattle: x0.5, meat cattle x0.64, swine x0.75) This reveals improving techniques in breeding.
+{: .text-justify}
+
+Chickens, however, are another story. While the emissions per animal have,'t change much for laying chickens between 1961 and 2014, it should be noted that they first decreased by 25% (mind the y-axis) before going back to the original value - whatever progress was made in that area was lost. Chicken bred for meat have seen a 2-fold increase in the emission per animal, which is hardly beneficial. An explanation for that is the growing production of chickens (see production above) in crowded spaces, where there manure is left to rot. This is the only reasonably expandable emission source in the emissions we consider (chicken eat the same to reach maturity and there is no enteric fermentation).
+{: .text-justify}
+
+## Detailed emissions
+As usual when using global data, we miss differences between countries. Let us look at a map of the emissions (in gigagrams), with time evolution.
+{: .text-justify}
+
+Use the slide above the map to advance through time and watch the countries' emissions change ! you can also zoom in and out, and move around in the map. Countries in white are countries for which there is missing data.
+{: .text-justify}
+
+As the map show different trends, you can chose the scale at which to look at: log scale or classic linear scale. Linear scale will highligh dominating producers, will log will show the difference in magnitudes.
+{: .text-justify}
 
 {% include display_map_emission.html %}
 
+The evolution there is particularly interesting: will the USA, Russi and China used to be the main sources of emissions back in 1961, new countries have come around. We can clearly identify Brazil as the world's biggest producer of beef throught its emission, and China as the world's first producer of porc, by several magnitudes ! India also stands out as nowadays biggest cattle breeder for milk according to their emissions. But it might be that they are really inefficient.
+{: .text-justify}
+
+
+
 # Consumption
+While visualizing the emission due to animal breeding in their origin countries, we ignore the fact that the world is globalized and that there are trades everywhere. Is that important in our case ? Let us take a look: we plot the ratio between the volume of traded goods and the production of that good.
+{: .text-justify}
 
 {% include display_trade_frac.html %}
+
+We see that up to 15% of the world's production of goods are exchanged ! This is a lot, so we better take trades into account in our analysis. There is one big caveat, though: given our data, if a good transit throught a country (that is, country A buys it from country B which bought it from country C), it is counted twice, since we cannot distinguish between the origins of exports. It is likely we overestimate the fraction of trades - however, we do not expect the goods to transit through many countries, so the ratio is at most something like 5, being pessimistic.
+
+## Trade adjusted
 
 {% include display_map_conso.html %}
 
