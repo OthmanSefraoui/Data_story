@@ -48,6 +48,6 @@ If variability is so high even in a single country, we do not believe that calcu
 Members of the team had the following contributions:
 
 - *Othmane*: Loading and preparing manure data, computing co2 emissions due to manure, enteric fermentation and animal feeding of the consommation of countries, generating time sliders
-- *Othman*: Loading and preparing manure data, computing co2 emissions due to manure, enteric fermentation and animal feeding of the production of countries,generating time sliders
+- *Othman*: Loading and preparing manure data, computing co2 emissions due to manure, enteric fermentation and animal feeding of the production of countries, generating time sliders
 - *Perrine*: trade data loading, analysis and preprocessing, computing consumption of each country in terms of equivalent number of animal bred in the producing coutries, using trade data and production data, plot time series
 - *Quentin*: Loading and preparing production data, writting up the data story, handling website backend, map visualization
