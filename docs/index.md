@@ -74,9 +74,9 @@ As even normalization by countries doesn't smooth the difference enough, two sca
 > Use the slide above the map to advance through time and watch the countries' normalized production change ! You can also zoom in and out, and move around in the map. Countries in white are countries for which there is missing data.
 {: .text-justify}
 
-{% include display_map_prod_norm.html %}
+{% include display_map_prod.html %}
 
-> Analysis: TODO
+Using the above visualization, you can identify the big producers (compared to their population) for each good. Try "Porc": you will see that an unusual country has a very high ratio. But it is not due to a high production !
 
 After this overview of the production trends to get accustomed to the kind of data and problems we face (normalisation will comme back at us often), we would like to focus on the "environmental impact" of animal breeding. But the term is extremely vague: how do we mesure it ?
 {: .text-justify}
@@ -102,7 +102,7 @@ Overall, the only emissions we take into account are *direct*: emissions coming 
 {: .text-justify}
 
 ## Global emissions
-First, let us look at the global emisions for our five goods. As usual, we need to adjust for a growing population of bred animals, so we plot the "raw" data as well as the "per capita" data, normalized by . Mind the axis: so that you are able to compare the emissions between products, there is no baseline, and the vertical axis *doesn't start at 0*. We vizualize variations, but be careful about the starting point.
+First, let us look at the global emisions for our five goods. As usual, we need to adjust for a growing population, so we plot the "raw" data as well as the "per capita" data, normalized by the (human) population. Mind the axis: there is no baseline so that you are able to compare the emissions between products, and the vertical axis *doesn't start at 0*. We vizualize variations, but be careful about the starting point.
 {: .text-justify}
 
 {% include display_globem.html %}
@@ -110,10 +110,11 @@ First, let us look at the global emisions for our five goods. As usual, we need 
 If you look at the raw emission for cattle, between 1986 and about 2000, there is a huge drop in emissions. This is expected, because it corresponds to the mad cow disease epidemic. Other emissions have seen a somewhat steady rise.
 {: .text-justify}
 
-Per capita emission are very revealing: we can see that dairy cattle, meat cattle and swine emission per animal decreases over time! (dairy cattle: x0.5, meat cattle x0.64, swine x0.75) This reveals improving techniques in breeding.
+Per capita emission are very revealing: we can see that dairy cattle, meat cattle and swine emission per animal decreases over time! (dairy cattle: x0.5, meat cattle x0.64, swine x0.75): This reveals either a decreased global consumption per capita, or improving techniques.
 {: .text-justify}
 
-Chickens, however, are another story. While the emissions per animal have,'t change much for laying chickens between 1961 and 2014, it should be noted that they first decreased by 25% (mind the y-axis) before going back to the original value - whatever progress was made in that area was lost. Chicken bred for meat have seen a 2-fold increase in the emission per animal, which is hardly beneficial. An explanation for that is the growing production of chickens (see production above) in crowded spaces, where there manure is left to rot. This is the only reasonably expandable emission source in the emissions we consider (chicken eat the same to reach maturity and there is no enteric fermentation).
+Chickens, however, are another story. While the emissions per animal haven't changed much for laying chickens between 1961 and 2014, it should be noted that they first decreased by 25% (mind the y-axis) before going back to the original value - whatever progress was made in that area was lost. Chicken bred for meat have seen a 2-fold increase in the emission per capita, which is hardly beneficial.
+An explanation for that is the growing production of chickens (see production above) in crowded spaces and in high volume: it correlates with the increased production per capita. It is also possibale that manure is left to rot. This is the only expandable emission source in the emissions we consider (chicken eat the same to reach maturity).
 {: .text-justify}
 
 ## Detailed emissions
@@ -141,15 +142,20 @@ We see that up to 15% of the world's production of goods are exchanged ! This is
 
 However, adjusting our emissions visualization for trades allows to distinguish between producers countries and consumers countries, which is interessting - it is worth a shot
 {: .text-justify}
-
-Now, how do we adjust for trade
+<!--
+Now, how do we adjust for trade ? We can't determine if exported goods have already been imported or comes from local production, 
+-->
 
 ## Trade adjusted
+Let us vizualize the emissions, but this time imputed to the consuming country:
 
 {% include display_map_conso.html %}
 
+Let us focus on a particular example: Meat cattle, brazil and the USA. From the previous emission visualization, we saw that brazil was a heavy emitter. However, when we account for trade, it significantly drops, while USA gets more emissive ! So some countries do import a lot, so that their emissions appears abroad if we do not adjust for trade.
+{: .text-justify}
 
 # World emission trends
+
 
 {% include display_world_em.html %}
 
