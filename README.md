@@ -50,4 +50,4 @@ Members of the team had the following contributions:
 - *Othmane*: manure data, 
 - *Othman*: manure data,
 - *Perrine*: trade data loading and analysis, trade imputation
-- *Quentin*: Loading and preparing production data, writting up the data story, handling website backend
+- *Quentin*: Loading and preparing production data, writting up the data story, handling    website backend
