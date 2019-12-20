@@ -41,8 +41,3 @@ The first challenge is to find the data. The [FAO](http://www.fao.org/faostat/en
 
 The second difficulty is to find a metric to quantify the notion of "environmental footprint", that is a very vague and ill-defined notion, unsutable for analysis. We will focus on *greenhouse gas emissions*, and for comparison purposes always express them in CO<sub>2</sub> equivalence. 
 
-
-
-
-
-  {% include globem_display.html %}

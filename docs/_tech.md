@@ -29,6 +29,7 @@ height_half: 384
   </style>
 </head>
 
+{% include globem_display.html %}
 
 # Underscript
 CO<sub>2</sub>
