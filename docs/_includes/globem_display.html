@@ -1,17 +1,17 @@
 
 <div class="dropdown-wrapper">
     <select class="dropdown-wrapper-child" id="sel_globem_dir">
-        <option value="">Raw</option>
-        <option value="">Per Capita</option>
+        <option value="per_capita">Per_capita</option>
+        <option value="raw">Raw</option>
     </select>
     <select class="dropdown-wrapper-child" id="sel_globem_file">
-        <option value="">Cattle (for milk)</option>
-        <option value="">Cattle (for meat)</option>
-        <option value="">Chicken (for meat)</option>
-        <option value="">Chicken (for eggs)</option>
-        <option value="">Pigs</option>
+        <option value="total_livestock_emission_cattle_dairy.png">milk cattle</option>
+        <option value="total_livestock_emission_cattle_non-dairy.png">beef cattle</option>
+        <option value="total_livestock_emission_chickens_broilers.png">meat chicken</option>
+        <option value="total_livestock_emission_chickens_layers.png">hen laying eggs</option>
+        <option value="total_livestock_emission_swine.png">pig</option>
     </select>
-    <iframe id="img_globem" src="img/globem/total/Total_livestock_emission_swine.png" height="700" width="{{page.width}}" frameborder="0" scrolling="no"></iframe>
+    <iframe id="img_globem" src="img/globem/raw/total_livestock_emission_cattle_non-dairy.png" height="700" width="{{page.width}}" frameborder="0" scrolling="no"></iframe>
 </div>
 <script>
     function loadGlobemImg() {
