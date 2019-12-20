@@ -140,7 +140,7 @@ While visualizing the emission due to animal breeding in their origin countries,
 We see that up to 15% of the world's production of goods are exchanged ! This is a lot, so we better take trades into account in our analysis. There is one big caveat, though: given our data, if a good transit throught a country (that is, country A buys it from country B which bought it from country C), it is counted twice, since we cannot distinguish between the origins of exports. It is likely we overestimate the fraction of trades - however, we do not expect the goods to transit through many countries, so the ratio is at most something like 5, being pessimistic.
 {: .text-justify}
 
-However, adjusting our emissions visualization for trades allows to distinguish between producers countries and consumers countries, which is interessting - it is worth a shot
+However, adjusting our emissions visualization for trades allows to distinguish between producers countries and consumers countries, which is interessting - it is worth a shot.
 {: .text-justify}
 <!--
 Now, how do we adjust for trade ? We can't determine if exported goods have already been imported or comes from local production, 
@@ -154,9 +154,16 @@ Let us vizualize the emissions, but this time imputed to the consuming country:
 Let us focus on a particular example: Meat cattle, brazil and the USA. From the previous emission visualization, we saw that brazil was a heavy emitter. However, when we account for trade, it significantly drops, while USA gets more emissive ! So some countries do import a lot, so that their emissions appears abroad if we do not adjust for trade.
 {: .text-justify}
 
-# World emission trends
+This effect was anticipated, but with that visualization, we are able to quantify it and to actually find countries which import (or export) as lot !
+{: .text-justify}
 
+# World emission trends
+The most striking conclusion we reached while exploring the data womes from global emissions trends. Let us look at them:
 
 {% include display_world_em.html %}
 
+Nothing unusual here. Bu if we normalized by population :
+
 {% include display_world_em_norm.html %}
+
+We can see a decrease ! We are actually reducing our emissions per inhabitant, which is very unexpected !
