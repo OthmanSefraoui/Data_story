@@ -3,3 +3,7 @@ data/global-food-agriculture-statistics/
 .ipynb_checkpoints/
 **/__pycache__/
 data/df_paths.json
+**.pkl
+Plots/
+log/
+non_log/

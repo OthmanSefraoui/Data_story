@@ -1,5 +1,9 @@
 <div style="width: 100%" class="dropdown-wrapper">
-    <select class="dropdown-wrapper-child" id="sel_map_conso_type">
+    <select class="dropdown-wrapper-child" id="sel_map_conso_norm">
+        <option value="map_conso_norm">Per inhabitant values</option>
+        <option value="map_conso"> Raw values</option>
+    </select>
+    <select class="dropdown-wrapper-child" style="display:none" id="sel_map_conso_type">
         <option value="linear_scale">Linear scale</option>
         <option value="log_scale">Log scale</option>
     </select>
@@ -24,12 +28,22 @@
 </div>
 <script>
     function loadMapConsoImg() {
+        var sel_norm = document.getElementById("sel_map_conso_norm");
         var sel_folder = document.getElementById("sel_map_conso_type");
         var sel_file = document.getElementById("sel_map_conso_good");
         var img = document.getElementById("img_map_conso");
-        img.src = "img/map_conso/" + sel_folder.value + "/" + sel_file.value
-        return false;
+        // ignore and hide scale selector on normalized values
+        if (sel_norm.value == "map_conso_norm") {
+            sel_folder.style.display = "none";
+            img.src = "img/" + sel_norm.value + "/linear_scale/" + sel_file.value;
+            return false;
+        } else {
+            sel_folder.style.display = "flex" // must match the value set in the header par of index.md
+            img.src = "img/" + sel_norm.value + "/" + sel_folder.value + "/" + sel_file.value;
+            return false;
+        }
     }
+document.getElementById("sel_map_conso_norm").onchange = loadMapConsoImg;
 document.getElementById("sel_map_conso_type").onchange = loadMapConsoImg;
 document.getElementById("sel_map_conso_good").onchange = loadMapConsoImg;
 </script>

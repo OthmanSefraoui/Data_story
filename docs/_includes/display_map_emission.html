@@ -1,19 +1,23 @@
 <div style="width: 100%" class="dropdown-wrapper">
-    <select class="dropdown-wrapper-child" id="sel_map_em_type">
+    <select class="dropdown-wrapper-child" id="sel_map_em_norm">
+        <option value="map_em_norm">Production-normalized</option>
+        <option value="map_em">Raw values</option>
+    </select>
+    <select class="dropdown-wrapper-child" style="display: none" id="sel_map_em_type">
         <option value="linear_scale">Linear scale</option>
         <option value="log_scale">Log scale</option>
     </select>
     <select class="dropdown-wrapper-child" id="sel_map_em_good">
-        <option value="cattle_dairy.html">Dairy cattle</option>
-        <option value="cattle_non-dairy.html">Meat cattle</option>
-        <option value="chickens_broilers.html">Meat Chicken</option>
-        <option value="chickens_layers.html">Laying Chicken</option>
-        <option value="swine.html">Swine</option>
+        <option value="cattle_dairy">Dairy cattle</option>
+        <option value="cattle_non-dairy">Meat cattle</option>
+        <option value="chickens_broilers">Meat Chicken</option>
+        <option value="chickens_layers">Laying Chicken</option>
+        <option value="swine">Swine</option>
     </select>
     <div style="width: 100%">
         <iframe
           id="img_map_em"
-          src="img/map_em/linear_scale/cattle_dairy.html"
+          src="img/map_em_norm/linear_scale/cattle_dairy.html"
           height="700"
           style="width: 100%"
           frameborder="0"
@@ -23,12 +27,23 @@
 </div>
 <script>
     function loadMapEmImg() {
+        var sel_norm = document.getElementById("sel_map_em_norm");
         var sel_folder = document.getElementById("sel_map_em_type");
         var sel_file = document.getElementById("sel_map_em_good");
         var img = document.getElementById("img_map_em");
-        img.src = "img/map_em/" + sel_folder.value + "/" + sel_file.value
+        if (sel_norm.value == "map_em_norm") {
+            sel_folder.style.display = "none";
+            img.src = "img/" + sel_norm.value + "/linear_scale/" + sel_file.value + ".html";
+            return false;
+        } else {
+            sel_folder.style.display = "flex" // must match the value set in the header par of index.md
+            img.src = "img/" + sel_norm.value + "/" + sel_folder.value + "/" + sel_file.value + ".html";
+            return false;
+        }
+        img.src = "img/map_em/" + sel_folder.value + "/" + sel_file.value + ".html";
         return false;
     }
+document.getElementById("sel_map_em_norm").onchange = loadMapEmImg;
 document.getElementById("sel_map_em_type").onchange = loadMapEmImg;
 document.getElementById("sel_map_em_good").onchange = loadMapEmImg;
 </script>

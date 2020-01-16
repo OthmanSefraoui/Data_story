@@ -68,7 +68,7 @@ It is also interesting to note that there seems to be three groups of related go
 Since the above study was global, we missed the differences between countries. We expect some very general groups to emerge, such as developped, developping and third-world countries. However, we face the same problem above as with the raw world production: countries have different sizes, and to better compare them we have to take that into account. We need to look at the production per inhabitant to compare, say, the US and Switzerland. We therefore normalise by the number of inhabitants, and the unit becomes *tonnes per inhabitant*.
 {: .text-justify}
 
-As even normalization by countries doesn't smooth the difference enough, two scales are available: linear scale and log scale.
+As even normalization by countries doesn't smooth the difference enough, two scales are available: linear scale and log scale., when log scale is possible.
 {: .text-justify}
 
 > Use the slide above the map to advance through time and watch the countries' normalized production change ! You can also zoom in and out, and move around in the map. Countries in white are countries for which there is missing data.
@@ -105,6 +105,8 @@ Overall, the only emissions we take into account are *direct*: emissions coming 
 First, let us look at the global emisions for our five goods. As usual, we need to adjust for a growing population, so we plot the "raw" data as well as the "per capita" data, normalized by the (human) population. Mind the axis: there is no baseline so that you are able to compare the emissions between products, and the vertical axis *doesn't start at 0*. We vizualize variations, but be careful about the starting point.
 {: .text-justify}
 
+> This is necessary, because all product do not produce emition at the same scale. For instance, compare chicken (meat) at a scale of around 5 kilograms CO2eq per inhabitant, whereas cattle (meat) is at 280 kilograms CO2eq per inhabitant
+
 {% include display_globem.html %}
 
 If you look at the raw emission for cattle, between 1986 and about 2000, there is a huge drop in emissions. This is expected, because it corresponds to the mad cow disease epidemic. Other emissions have seen a somewhat steady rise.
@@ -121,7 +123,7 @@ An explanation for that is the growing production of chickens (see production ab
 As usual when using global data, we miss differences between countries. Let us look at a map of the emissions (in gigagrams), with time evolution.
 {: .text-justify}
 
-As the map show different trends, you can chose the scale at which to look at: log scale or classic linear scale. Linear scale will highligh dominating producers, will log will show the difference in magnitudes.
+As the map show different trends, you can chose the scale at which to look at: log scale or classic linear scale. Linear scale will highligh dominating producers, while log will show the difference in magnitudes.
 {: .text-justify}
 
 {% include display_map_emission.html %}
@@ -137,17 +139,14 @@ While visualizing the emission due to animal breeding in their origin countries,
 
 {% include display_trade_frac.html %}
 
-We see that up to 15% of the world's production of goods are exchanged ! This is a lot, so we better take trades into account in our analysis. There is one big caveat, though: given our data, if a good transit throught a country (that is, country A buys it from country B which bought it from country C), it is counted twice, since we cannot distinguish between the origins of exports. It is likely we overestimate the fraction of trades - however, we do not expect the goods to transit through many countries, so the ratio is at most something like 5, being pessimistic.
+We see that up to 15% of the world's production of goods are exchanged ! This is a lot, so we better take trades into account in our analysis. There is one big caveat, though: given our data, if a good transits throught a country (that is, country A buys it from country B which bought it from country C), it is counted twice, since we cannot distinguish between the origins of exports. It is likely we overestimate the fraction of trades - however, we do not expect goods to transit through many countries, so the ratio is at most 5, being pessimistic.
 {: .text-justify}
 
 However, adjusting our emissions visualization for trades allows to distinguish between producers countries and consumers countries, which is interessting - it is worth a shot.
 {: .text-justify}
-<!--
-Now, how do we adjust for trade ? We can't determine if exported goods have already been imported or comes from local production, 
--->
 
 ## Trade adjusted
-Let us vizualize the emissions, but this time imputed to the consuming country:
+Let us vizualize the emissions, but this time imputed to the consuming country. As usual, since countries have different population sizes, it is best to use values normalized by the number of inhabitant in the country:
 
 {% include display_map_conso.html %}
 
@@ -166,4 +165,4 @@ Nothing unusual here. Bu if we normalized by population :
 
 {% include display_world_em_norm.html %}
 
-We can see a decrease ! We are actually reducing our emissions per inhabitant, which is very unexpected !
+We can see a decrease! We are actually reducing our emissions per inhabitant, which is very unexpected!
