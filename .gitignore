@@ -1,5 +1,4 @@
-data/detailed_trade_matrix/
-data/global-food-agriculture-statistics/
+data/
 .ipynb_checkpoints/
 **/__pycache__/
 data/df_paths.json
