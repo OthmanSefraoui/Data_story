@@ -126,6 +126,8 @@ As usual when using global data, we miss differences between countries. Let us l
 As the map show different trends, you can chose the scale at which to look at: log scale or classic linear scale. Linear scale will highligh dominating producers, while log will show the difference in magnitudes.
 {: .text-justify}
 
+> Some countries have a very large normalized production compared to all others. The maximum value displayed by the map is the 95% quantile of all data, and value above that are display in orange. This prevents the whole map from being purple and one or two countries being at maximum value
+
 {% include display_map_emission.html %}
 
 The evolution there is particularly interesting: will the USA, Russi and China used to be the main sources of emissions back in 1961, new countries have come around. We can clearly identify Brazil as the world's biggest producer of beef throught its emission, and China as the world's first producer of porc, by several magnitudes ! India also stands out as nowadays biggest cattle breeder for milk according to their emissions. But it might be that they are really inefficient.

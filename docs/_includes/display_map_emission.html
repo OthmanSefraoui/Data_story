@@ -35,12 +35,14 @@
             sel_folder.style.display = "none";
             img.src = "img/" + sel_norm.value + "/linear_scale/" + sel_file.value + ".html";
             return false;
-        } else {
+        }
+        else
+        {
             sel_folder.style.display = "flex" // must match the value set in the header par of index.md
             img.src = "img/" + sel_norm.value + "/" + sel_folder.value + "/" + sel_file.value + ".html";
             return false;
         }
-        img.src = "img/map_em/" + sel_folder.value + "/" + sel_file.value + ".html";
+        img.src = "img/" + sel_norm.value + "/" + sel_folder.value + "/" + sel_file.value + ".html";
         return false;
     }
 document.getElementById("sel_map_em_norm").onchange = loadMapEmImg;
